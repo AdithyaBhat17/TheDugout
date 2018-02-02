@@ -9,7 +9,7 @@ var express = require("express"),
     User = require("./models/user"),
     passportLocalMongoose = require("passport-local-mongoose");
     
-mongoose.connect("mongodb://localhost/blog_app");
+mongoose.connect("mongodb://AdithyaBhat:Rusty@ds111476.mlab.com:11476/thedugout");
 
 var app=express();
 
