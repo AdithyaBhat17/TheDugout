@@ -1,0 +1,29 @@
+<% include partials/header %>
+<div class="ui grid">
+    <div class="sixteen wide mobile twelve wide computer column">
+        <div class="ui container segment">
+            <% blogs.forEach(function(blog){ %>
+            <img class="ui fluid image" src="<%= blog.image%>" >
+            <h1 class="ui header"><%= blog.title %><br>
+                
+            </h1>
+            <span class="date"><%= blog.created.toDateString()%></span>
+            <p class="title"><%- blog.body.substring(0,200) %>...</p>
+            <a class="ui black button"  href="/blogs/<%=blog._id%>">Continue Reading ></a><hr class="style-four">
+            <% }) %>
+        </div>
+    </div>  
+    <div class="sixteen wide mobile four wide computer column recent" >
+        <div class="ui container segment">
+            <h4>RECENT POSTS</h4>
+            <% blogs.forEach(function(blog){ %>
+                <li><a class="posts" href="/blogs/<%=blog._id%>"> <%= blog.title %> </a></li><hr class="style-four">
+            <% }) %>
+        </div>
+    </div>
+</div>
+    
+
+
+
+<% include partials/footer %>

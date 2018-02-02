@@ -1,0 +1,29 @@
+<% include partials/header %>
+<div class="ui grid">
+    <div class="sixteen wide computer column">
+        <div class="ui container segment">
+                <img class="ui fluid image" src="<%= blog.image%>">
+                <h1 class="ui header showtitle"><%= blog.title %><br></h1>
+                <span class="date"><%= blog.created.toDateString()%></span>
+                <p class="desc"><%- blog.body%></p>            
+        </div>
+    </div>  
+</div>
+        
+        
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<% include partials/footer %>
