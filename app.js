@@ -43,6 +43,10 @@ app.get("/blogs",function(req, res){
     
 });
 
+app.get("/blogs/",function(req, res){
+    res.render("google7c8d08723b356869.html");
+});
+
 //new
  app.get("/secret",isLoggedIn,function(req, res){
       res.render("new");
